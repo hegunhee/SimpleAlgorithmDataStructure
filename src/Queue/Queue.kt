@@ -9,11 +9,19 @@ class Queue<T>() :BaseQueue<T> {
     }
 
     override fun dequeue(): T {
-        return que.removeLast()
+        if(que.isEmpty()){
+            throw NoSuchElementException("queue가 비었습니다.")
+        }else{
+            return que.removeFirst()
+        }
     }
 
     override fun peek(): T {
-        return que.last()
+        if(que.isEmpty()){
+            throw NoSuchElementException("queue가 비었습니다.")
+        }else{
+            return que.first()
+        }
     }
 
     override fun indexOf(data : T): Int {
