@@ -10,21 +10,21 @@ fun main(args: Array<String>){
     reverseBubbleSort(arr)
 }
 
-fun insertSort(arr : IntArray){
-    var temp = 0
-    arr.forEach { print("$it ")  }
-    println()
-    for(i in 0 until (arr.size -1)){
-        for(j in i until (arr.size-i)){
-            if(arr[i] > arr[j]){
-                temp = arr[i]
-                arr[i] = arr[j]
-                arr[j] = temp
-            }
-        }
-    }
-    arr.forEach { print("$it ")  }
-}
+//fun insertSort(arr : IntArray){
+//    var temp = 0
+//    arr.forEach { print("$it ")  }
+//    println()
+//    for(i in 0 until (arr.size -1)){
+//        for(j in i until (arr.size-i)){
+//            if(arr[i] > arr[j]){
+//                temp = arr[i]
+//                arr[i] = arr[j]
+//                arr[j] = temp
+//            }
+//        }
+//    }
+//    arr.forEach { print("$it ")  }
+//}
 
 fun reverseBubbleSort(arr : IntArray){
     var temp = 0
