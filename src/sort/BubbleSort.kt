@@ -7,15 +7,15 @@ fun main(args: Array<String>){
     val arr = IntArray(10){
         random.nextInt(100)
     }
-    reverseBubbleSort(arr)
+    insertSort(arr)
 }
 
 fun insertSort(arr : IntArray){
     var temp = 0
     arr.forEach { print("$it ")  }
     println()
-    for(i in 0 until (arr.size -1)){
-        for(j in i until (arr.size-i)){
+    for(i in 0 until (arr.size)){
+        for(j in (i+1) until (arr.size)){
             if(arr[i] > arr[j]){
                 temp = arr[i]
                 arr[i] = arr[j]
