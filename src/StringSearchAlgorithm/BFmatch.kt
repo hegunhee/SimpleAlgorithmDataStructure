@@ -19,7 +19,7 @@ fun bfMatch(txt : String, pat : String) : Int {
     var pt = 0
     var pp = 0
     var formatpat = pat
-    var formatCursor = "+"
+    var formatCursor = "1"
     var iscorrect = false
 
 
@@ -34,21 +34,22 @@ fun bfMatch(txt : String, pat : String) : Int {
             pp = 0
         }
 
-        if(iscorrect){
-            println(txt)
-            println(formatCursor)
-            println(pat) // +의 위치만 한칸 증가
-            formatCursor = " " + "+"
-        }else{
-//            formatpat.replace("0"," ")
-            println(txt)
-            println(formatCursor)
-            println(formatpat)
-            formatCursor = "-"
-            // pat의 위치를 한칸 증가
-            formatpat = " " + formatpat
-            // + - 위치를 pat의 위치로 옮김
-        }
+//        if(iscorrect){
+//
+//            formatCursor.replaceFirst('0','1')
+//            println(txt)
+//            println(formatCursor)
+//            println(formatpat) // +의 위치만 한칸 증가
+//            formatCursor = " " + formatCursor
+//        }else{
+//            formatCursor.replace('1','0')
+//            println(txt)
+//            println(formatCursor)
+//            println(formatpat)
+//            // pat의 위치를 한칸 증가
+//            formatpat = " " + formatpat
+//            // + - 위치를 pat의 위치로 옮김
+//        }
 
     }
     if(pp == pat.length){
