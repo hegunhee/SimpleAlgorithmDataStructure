@@ -57,26 +57,19 @@ class LinkedList<T>(node : Node<T>) {
 
     }
 
-//    fun remove(data : T){
-//        if(head != null){
-//            if(head?.data == data){
-//                head = head?.next
-//            }
-//            var ptr = head
-//            var pre = head
-//            while(ptr?.next != null){
-//                if(ptr.data == data){
-//                   pre?.next = ptr.next
-//                }
-//                pre = ptr
-//                ptr = ptr?.next
-//
-//            }
-//            if(pre?.data == data){
-//                pre?.next = null
-//            }
-//        }
-//    }
+    fun remove(data : Node<T>){
+        if(head != null){
+            if(head?.data == data){
+                removeFirst()
+            }
+            var ptr = head ?: return
+            while(ptr.next == data){
+                ptr = ptr.next!!
+                if(ptr == null) return
+            }
+            ptr.next = data.next
+        }
+    }
     fun removeFirst(){
         if(head != null){
             head = head?.next
